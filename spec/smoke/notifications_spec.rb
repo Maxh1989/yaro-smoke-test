@@ -3,7 +3,6 @@ require 'spec_helper'
 RSpec.describe 'Notifications Smoke Test' do
   include_context 'smoke-test-helpers'
 
-  let(:graphql_url) { "#{platform_root_url}/api/v1/graphql" }
   let(:notifications_query) do
     %(query {
         notifications {
