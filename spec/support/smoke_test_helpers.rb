@@ -21,4 +21,14 @@ RSpec.shared_context 'smoke-test-helpers' do
   def graphql_response(url, query, access_token)
     RestClient.post(url, { query: query }, headers={ authorization: "Bearer #{access_token}" })
   end
+
+  def rest_response(url, method, payload, headers={})
+    RestClient.send(method, url, payload, headers)
+  rescue RestClient::ExceptionWithResponse => e
+    e.response
+  end
+
+  def parse_response_data(response)
+    JSON.parse(response.body)['data']
+  end
 end
