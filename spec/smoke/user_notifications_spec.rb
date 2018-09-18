@@ -29,17 +29,17 @@ RSpec.describe 'Notifications Smoke Test' do
         expected_notifications = {
           'notifications' => [
             {
+              'headline' => 'Your HSA balance has increased!',
+              'in_app_notification' => {
+                'message' => '$25 was added to your HSA.'
+              }
+            },
+            {
               'headline' => 'You reached your max. HSA contribution',
               'in_app_notification' => {
                 'message' => 'Congratulations! You put in the maximum HSA contribution for 2018.'
               }
             },
-            {
-              'headline' => 'Your HSA balance has increased!',
-              'in_app_notification' => {
-                'message' => '$25 was added to your HSA.'
-              }
-            }
           ]
         }
 
@@ -63,15 +63,9 @@ RSpec.describe 'Notifications Smoke Test' do
         expected_notifications = {
           'notifications' => [
             {
-              'headline' => 'You have an unpaid claim',
+              'headline' => "It's summer camp season!",
               'in_app_notification' => {
-                'message' => 'View your claim and resolve any unpaid balance.'
-              }
-            },
-            {
-              'headline' => "Don't miss out!",
-              'in_app_notification' => {
-                'message' => 'You can still contribute $1250 to your HSA this year.'
+                'message' => 'Do your kids need a checkup before summer camp? Schedule a PCP visit today.'
               }
             },
             {
@@ -81,12 +75,18 @@ RSpec.describe 'Notifications Smoke Test' do
               }
             },
             {
-              'headline' => "It's summer camp season!",
+              'headline' => "Don't miss out!",
               'in_app_notification' => {
-                'message' => 'Do your kids need a checkup before summer camp? Schedule a PCP visit today.'
+                'message' => 'You can still contribute $1250 to your HSA this year.'
+              }
+            },
+            {
+              'headline' => 'You have an unpaid claim',
+              'in_app_notification' => {
+                'message' => 'View your claim and resolve any unpaid balance.'
               }
             }
-          ]
+      ]
         }
 
         expect(user_notifications).to eq(expected_notifications)
