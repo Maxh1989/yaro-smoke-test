@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'Notifications Smoke Test' do
+RSpec.describe 'Notifications Smoke Test', :yaro, :notifications do
   include_context 'smoke-test-helpers'
 
   let(:notifications_query) do
