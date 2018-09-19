@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'Notifications Smoke Test' do
+RSpec.describe 'Notifications Smoke Test', :yaro, :notifications do
   include_context 'smoke-test-helpers'
 
   let(:notifications_query) do
@@ -35,7 +35,7 @@ RSpec.describe 'Notifications Smoke Test' do
               }
             },
             {
-              'headline' => 'You reached your max. HSA contribution',
+              'headline' => 'You reached your max HSA contribution',
               'in_app_notification' => {
                 'message' => 'Congratulations! You put in the maximum HSA contribution for 2018.'
               }

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'User Plans Smoke Test' do
+RSpec.describe 'User Plans Smoke Test', :yaro, :platform do
   include_context 'smoke-test-helpers'
 
   let(:user_plans_query) do

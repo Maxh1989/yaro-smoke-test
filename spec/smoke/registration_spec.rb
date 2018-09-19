@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'Registration Smoke Tests' do
+RSpec.describe 'Registration Smoke Tests', :yaro, :platform do
   include_context 'smoke-test-helpers'
 
   context 'registration-code' do

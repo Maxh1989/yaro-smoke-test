@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'User Quiz Questions Smoke Test' do
+RSpec.describe 'User Quiz Questions Smoke Test', :yaro, :quiz do
   include_context 'smoke-test-helpers'
 
   let(:user_quiz_questions_query) do
