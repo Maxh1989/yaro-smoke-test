@@ -1,4 +1,5 @@
 require 'json'
+require 'base64'
 
 RSpec.shared_context 'smoke-test-helpers' do
   let(:platform_root_url) { ENV.fetch('PLATFORM_ROOT_URL') }
@@ -28,7 +29,9 @@ RSpec.shared_context 'smoke-test-helpers' do
     e.response
   end
 
+
   def parse_response_data(response)
     JSON.parse(response.body)['data']
   end
+
 end
